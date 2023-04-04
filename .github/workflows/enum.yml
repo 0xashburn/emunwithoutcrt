@@ -35,7 +35,7 @@ jobs:
       with:
         name: Subdomains results
         path: |
-          subfinder_output.txt
+           sorted_domains.txt
 
   HTTPX:
     runs-on: ubuntu-latest
