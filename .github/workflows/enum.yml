@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'xapobank.com'
+  DOMAIN: 'phenom.com'
 
 jobs:
   subdomains:
