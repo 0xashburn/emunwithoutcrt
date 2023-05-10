@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'wgtwo.com'
+  DOMAIN: 'adb.org'
 
 jobs:
   subdomains:
