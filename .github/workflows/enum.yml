@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'uu.nl'
+  DOMAIN: 'blinkit.com'
 
 jobs:
   subdomains:
