@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'lufa.com'
+  DOMAIN: 'bluescape.com'
 
 jobs:
   subdomains:
