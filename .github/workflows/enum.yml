@@ -57,7 +57,7 @@ jobs:
 
     - name: HTTPX_Detailed 
       run: |
-        cat sorted_domains.txt | httpx -sc -title -server | tee -a detailed_httpx.txt
+        cat sorted_domains.txt | httpx -sc -title -server -fr -td | tee -a detailed_httpx.txt
       shell: bash
     - name: HTTPX_Live for endpoint
       run: | 
