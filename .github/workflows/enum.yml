@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'firstcry.com'
+  DOMAIN: 'huawei.com'
 
 jobs:
   subdomains:
