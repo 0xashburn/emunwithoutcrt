@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'huawei.com'
+  DOMAIN: 'knb.nl'
 
 jobs:
   subdomains:
@@ -76,3 +76,30 @@ jobs:
           detailed_httpx.txt
           200httpx.txt
           normalhttpx.txt
+          
+  HostHeader Injection:
+    runs-on: ubuntu-latest
+    needs: HTTPX
+    steps:
+    - name: Download results
+      uses: actions/download-artifact@v2
+      with:
+        name: HTTPX results
+
+    - name: Install tool from github.com/prakashchand72 
+      run: |
+        curl https://raw.githubusercontent.com/prakashchand72/hostheaderinjection_finder/main/hostheaderinject -o hostheaderinjection.sh
+      shell: bash
+
+    - name: Scanning 
+      run: |
+        bash hostheaderinjection.sh 200httpx.txt
+      shell: bash
+
+    - name: Save results
+      uses: actions/upload-artifact@v2
+      with:
+        name: HostHeaderinjection
+        path: |
+          vulnerable_urls.txt
+
